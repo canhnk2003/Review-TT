@@ -1,0 +1,46 @@
+@import url(./components/button.css);
+@import url(./components/input.css);
+@import url(./components/combobox.css);
+@import url(./components/table.css);
+@import url(./components/radio.css);
+@import url(./layout/header.css);
+@import url(./layout/nav.css);
+@import url(./layout/content.css);
+@import url(./pages/dialog.css);
+@import url(./pages/popup.css);
+@import url(../assets/font/fontawesome-5.15.1/css/all.min.css);
+@import url(../assets/font/fontawesome-5.15.1/js/all.min.js);
+body{
+    margin: 0;
+    font-family: GoogleSands;
+    font-size: 14px;
+    font-weight: 500;
+}
+@font-face{
+    font-family: GoogleSands;
+    src: url("../assets/font/GoogleSans-Regular.otf");
+}
+@font-face{
+    font-family: GoogleSands Italic;
+    src: url("../assets/font/GoogleSans-Italic.otf");
+}
+@font-face{
+    font-family: GoogleSands Bold;
+    src: url("../assets/font/GoogleSans-Bold.otf");
+}
+.container{
+    /* display: grid;
+    grid-template-columns: 200px calc(100% - 200px);
+    grid-template-rows: 56px calc(100vh - 56px); */
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+input[type="date"]{
+    font-size: 14px;
+    font-weight: 500;
+    font-family: GoogleSands;
+    width: 140px;
+}
+

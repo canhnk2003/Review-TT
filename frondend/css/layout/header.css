@@ -1,0 +1,87 @@
+header{
+    width: 100%;
+    height: 56px;
+    display: flex;
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+
+    
+}
+/* Left header */
+header .m-header-left{
+    width: 200px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+header .m-header-left .m-header-left-toggle{
+    width: 24px;
+    height: 24px;
+    background-image: url(../../assets/img/toggle.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 16px;
+    cursor: pointer;
+}
+header .m-header-left .m-header-left-logo{
+    width: calc(100% - 56px);
+    height: 32px;
+    background-image: url(../../assets/img/cukcuk-logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Right header */
+header .m-header-right{
+    display: flex;
+    align-items: center;
+    width: calc(100% - 200px);
+    box-sizing: border-box;
+}
+
+/* Right header - select*/
+header .m-header-right .m-header-right-select{
+    margin-left: 24px;
+}
+header .m-header-right .m-header-right-select select{
+    margin-top: 0px;
+}
+header .m-header-right .m-header-right-select select:hover{
+    background-color: #f6f6f6;
+}
+header .m-header-right .m-header-right-select select:focus{
+    border: 1px solid #5DC748;
+}
+header .m-header-right .m-header-right-select select:active{
+    border: 1px solid #e6e6e6;
+}
+
+/* Right header group*/
+header .m-header-right .m-header-right-group{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 16px;
+    height: 56px;
+    box-sizing: border-box;
+}
+header .m-header-right .m-header-right-group .m-header-right-avatar{
+    background-image: url(../../assets/icon/avatar-default.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+}
+header .m-header-right .m-header-right-group .m-header-right-name{
+    margin-right: 16px;
+}
+header .m-header-right .m-header-right-group .m-header-right-threedots{
+    background-image: url(../../assets/icon/option.png);
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
