@@ -3,11 +3,11 @@
 @import url(./components/combobox.css);
 @import url(./components/table.css);
 @import url(./components/radio.css);
+@import url(./components/dialog.css);
+@import url(./components/popup.css);
 @import url(./layout/header.css);
 @import url(./layout/nav.css);
 @import url(./layout/content.css);
-@import url(./pages/dialog.css);
-@import url(./pages/popup.css);
 @import url(../assets/font/fontawesome-5.15.1/css/all.min.css);
 @import url(../assets/font/fontawesome-5.15.1/js/all.min.js);
 body{

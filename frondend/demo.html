@@ -4,17 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <style>
+      .radio {
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+}
+
+.radio-checked {
+    background-color: #a0d468; /* Màu nền khi đã chọn */
+    color: #ffffff; /* Màu chữ khi đã chọn */
+    /* Các thuộc tính CSS khác để chỉnh sửa vẻ bề ngoài khi đã chọn */
+}
+
+    </style>
   </head>
   <body>
+    <div class="radio" onclick="selectRadio(this)">Radio 1</div>
+    <div class="radio" onclick="selectRadio(this)">Radio 2</div>
+    <div class="radio" onclick="selectRadio(this)">Radio 3</div>
     <script>
-      function removeStars(inputString) {
-        return inputString.replace(/\*/g, "");
-      }
+      let selectedRadio = null; // Biến global để lưu trữ radio đang được chọn
 
-      // Ví dụ sử dụng
-      let input = "Hello* World*!";
-      let result = removeStars(input);
-      console.log(result); // Kết quả: "Hello World!"
+      function selectRadio(radioDiv) {
+        // Bỏ chọn radio hiện tại nếu đã có radio được chọn trước đó
+        if (selectedRadio !== null) {
+          selectedRadio.classList.remove("radio-checked");
+        }
+
+        // Chọn radio mới
+        radioDiv.classList.add("radio-checked");
+
+        // Cập nhật biến selectedRadio
+        selectedRadio = radioDiv;
+      }
     </script>
   </body>
 </html>

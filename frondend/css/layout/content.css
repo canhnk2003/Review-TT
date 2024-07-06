@@ -20,6 +20,7 @@
     box-sizing: border-box;
 }
 .main .m-title-table .m-title-table-left{
+    font-size: 16px;
     display: flex;
 }
 .main .m-title-table .m-title-table-left .m-title-icon i{
@@ -30,7 +31,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 6px 0;
+    padding-top: 6px;
+    padding-bottom: 12px;
     box-sizing: border-box;
 }
 .main .m-toolbar-table .m-toolbar-quickfilter{

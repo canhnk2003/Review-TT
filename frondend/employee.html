@@ -82,7 +82,7 @@
           </div>
         </div>
         <div class="m-data-table">
-          <table id="table-container">
+          <table id="tblEmployee">
             <thead>
               <tr>
                 <th class="">
@@ -91,7 +91,7 @@
                 <th class="m-data-left">STT</th>
                 <th class="m-data-left" style="width: 120px">Mã nhân viên</th>
                 <th class="m-data-left">Họ và tên</th>
-                <th class="m-data-left" style="width: 100px">Giới tính</th>
+                <th class="m-data-left" style="width: 120px">Giới tính</th>
                 <th class="m-data-left" style="width: 120px">Ngày sinh</th>
                 <th class="m-data-left">Địa chỉ Email</th>
                 <th class="m-data-left">Địa chỉ</th>
@@ -121,38 +121,6 @@
                 <td>NV-34296</td>
                 <td>Hoàng Hưng Chung</td>
                 <td>Nam</td>
-                <td>02/08/1954</td>
-                <td>chunghh@gmail.com</td>
-                <td>104 nhà K, ngõ 72 Lĩnh Nam</td>
-                <td>
-                  <div class="m-table-tool">
-                    <div class="m-edit m-tool-icon"></div>
-                    <div class="m-more m-tool-icon"></div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="m-data-center"><input type="checkbox" /></td>
-                <td>15</td>
-                <td>NV-34296</td>
-                <td>Hoàng Hưng Chung</td>
-                <td>Nữ</td>
-                <td>02/08/1954</td>
-                <td>chunghh@gmail.com</td>
-                <td>104 nhà K, ngõ 72 Lĩnh Nam</td>
-                <td>
-                  <div class="m-table-tool">
-                    <div class="m-edit m-tool-icon"></div>
-                    <div class="m-more m-tool-icon"></div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="m-data-center"><input type="checkbox" /></td>
-                <td>15</td>
-                <td>NV-34296</td>
-                <td>Hoàng Hưng Chung</td>
-                <td></td>
                 <td>02/08/1954</td>
                 <td>chunghh@gmail.com</td>
                 <td>104 nhà K, ngõ 72 Lĩnh Nam</td>
@@ -209,15 +177,15 @@
                   <div>Giới tính</div>
                   <div class="m-radiobtn">
                     <div class="m-radiomale m-radio">
-                      <div class="m-radio-icon"></div>
+                      <div class="m-radio-icon m-radio-icon-unchecked"></div>
                       Nam
                     </div>
                     <div class="m-radiofemale m-radio">
-                      <div class="m-radio-icon"></div>
+                      <div class="m-radio-icon m-radio-icon-unchecked"></div>
                       Nữ
                     </div>
                     <div class="m-radioother m-radio">
-                      <div class="m-radio-icon"></div>
+                      <div class="m-radio-icon m-radio-icon-unchecked"></div>
                       Khác
                     </div>
                   </div>
@@ -366,20 +334,5 @@
       </div>
     </div>
     <script src="./js/employee.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var table = document.getElementById("table-container"); // Thay thế bằng ID của bảng của bạn
-
-        if (table) {
-          var wrapper = document.createElement("div");
-          wrapper.style.overflowY = "auto";
-          wrapper.style.maxHeight = "486px"; // Điều chỉnh chiều cao tối đa của thanh cuộn dọc tại đây
-
-          // Di chuyển bảng vào wrapper và wrapper vào nơi thích hợp trong DOM
-          table.parentNode.insertBefore(wrapper, table);
-          wrapper.appendChild(table);
-        }
-      });
-    </script>
   </body>
 </html>

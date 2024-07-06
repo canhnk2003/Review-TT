@@ -1,8 +1,10 @@
 /* Data-table */
  .m-data-table{
     width: 100%;
-    padding: 6px 16px 0px 24px;
+    padding: 0px 16px 0px 24px;
     box-sizing: border-box;
+    height: 486px;
+    overflow: auto;
 }
  .m-data-left{
     text-align: left;
@@ -16,7 +18,9 @@
  .m-data-table table thead tr{
     /* background-color: #F5F5F5; */
     background-color: #EFF2F4;
-    /* position: absolute; */
+    position: sticky;
+    top: 0;
+    z-index: 1;
     width: calc(100% - 40px);
 }
  .m-data-table table thead tr:hover{
@@ -77,19 +81,9 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.16);
     cursor: pointer;
 }
-/* .m-data-table table tbody tr .m-table-tool .m-edit i{
-    background-color: yellow;
-    width: 24px;
-    height: 24px;
-} */
 .m-data-table table tbody tr .m-table-tool .m-edit{
-    background-image: url(../../assets/icon/delete-48.png);
+    background-image: url(../../assets/icon/pen.png);
     margin-right: 8px;
-    /* width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around; */
 }
 .m-data-table table tbody tr .m-table-tool .m-more{
     background-image: url(../../assets/icon/option.png);
