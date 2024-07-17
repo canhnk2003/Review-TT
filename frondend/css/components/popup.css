@@ -6,6 +6,8 @@
     max-width: 650px;
     left: 50%;
     transform: translate(-50%, -20%);
+    visibility: hidden;
+    z-index: 3;
 }
 .m-popup-block .m-popup-item{
     display: flex;
@@ -33,6 +35,12 @@
 }
 .m-popup-block .m-popup-item .m-popup-text-warning,.m-popup-text-info{
     width: calc(100% - 65px);
+}
+.m-popup-block .m-popup-item .m-popup-text-error{
+    width: calc(100% - 170px);
+}
+.m-popup-block .m-popup-item .m-popup-text-success{
+    width: calc(100% - 130px);
 }
 .m-popup-block .m-popup-item .m-popup-text-success span{
     color: #50B83C;

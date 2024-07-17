@@ -1,9 +1,9 @@
 /* Data-table */
  .m-data-table{
     width: 100%;
-    padding: 0px 16px 0px 24px;
     box-sizing: border-box;
-    height: 486px;
+    /* height: 486px; */
+    height: calc(100% - 186px);
     overflow: auto;
 }
  .m-data-left{
@@ -80,6 +80,7 @@
     border-radius: 50%;
     box-shadow: 0 2px 8px rgba(0,0,0,0.16);
     cursor: pointer;
+    background-color: #EFF2F4;
 }
 .m-data-table table tbody tr .m-table-tool .m-edit{
     background-image: url(../../assets/icon/pen.png);
@@ -87,6 +88,9 @@
 }
 .m-data-table table tbody tr .m-table-tool .m-more{
     background-image: url(../../assets/icon/option.png);
+}
+.m-data-table table tbody tr .m-table-tool .m-delete{
+    background-image: url(../../assets/icon/delete-48.png);
 }
 
 /* Pagination */

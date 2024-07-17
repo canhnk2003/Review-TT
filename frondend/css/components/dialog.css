@@ -65,6 +65,12 @@
 .m-dialog .m-dialog-content .m-dialog-body .m-dialog-row .m-row-name input{
     width: 100%;
 }
+.m-dialog .m-dialog-content .m-dialog-body .m-dialog-row .m-row-birth{
+    width: 140px;
+}
+.m-dialog .m-dialog-content .m-dialog-body .m-dialog-row .m-row-birth input{
+    width: 100%;
+}
 
 .m-dialog .m-dialog-content .m-dialog-body .m-dialog-row .m-row-item{
     margin-right: 16px;
@@ -102,6 +108,12 @@
     width: calc(50% - 162px);
 }
 .m-dialog .m-dialog-content .m-dialog-body .m-dialog-row .m-row-idcard input{
+    width: 100%;
+}
+.m-dialog .m-dialog-content .m-dialog-body .m-dialog-row .m-row-licensedate{
+    width: 140px;
+}
+.m-dialog .m-dialog-content .m-dialog-body .m-dialog-row .m-row-licensedate input{
     width: 100%;
 }
 

@@ -3,42 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/main.css" />
-    <style>
-      .radio {
-    cursor: pointer;
-    padding: 10px;
-    margin: 5px;
-    border: 1px solid #ccc;
-}
-
-.radio-checked {
-    background-color: #a0d468; /* Màu nền khi đã chọn */
-    color: #ffffff; /* Màu chữ khi đã chọn */
-    /* Các thuộc tính CSS khác để chỉnh sửa vẻ bề ngoài khi đã chọn */
-}
-
-    </style>
+    <title>Xuất dữ liệu sang Excel</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.0/xlsx.full.min.js"></script>
   </head>
   <body>
-    <div class="radio" onclick="selectRadio(this)">Radio 1</div>
-    <div class="radio" onclick="selectRadio(this)">Radio 2</div>
-    <div class="radio" onclick="selectRadio(this)">Radio 3</div>
+    <button onclick="exportToExcel()">Xuất file Excel</button>
+
+    <table id="employee-table" border="1">
+      <caption>Danh sách nhân viên</caption>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Tên</th>
+          <th>Địa chỉ</th>
+          <th>Số điện thoại</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Nguyễn Văn A</td>
+          <td>Hà Nội</td>
+          <td>0123456789</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Phạm Thị B</td>
+          <td>TP.HCM</td>
+          <td>0987654321</td>
+        </tr>
+        <!-- Các dòng dữ liệu khác -->
+      </tbody>
+    </table>
+
     <script>
-      let selectedRadio = null; // Biến global để lưu trữ radio đang được chọn
+      function exportToExcel() {
+        const table = document.getElementById("employee-table");
+        const caption = table.querySelector("caption");
+        const sheetName = caption ? caption.textContent : "Sheet JS";
 
-      function selectRadio(radioDiv) {
-        // Bỏ chọn radio hiện tại nếu đã có radio được chọn trước đó
-        if (selectedRadio !== null) {
-          selectedRadio.classList.remove("radio-checked");
-        }
-
-        // Chọn radio mới
-        radioDiv.classList.add("radio-checked");
-
-        // Cập nhật biến selectedRadio
-        selectedRadio = radioDiv;
+        const wb = XLSX.utils.table_to_book(table, { sheet: sheetName });
+        XLSX.writeFile(wb, "employee_data.xlsx");
       }
     </script>
   </body>

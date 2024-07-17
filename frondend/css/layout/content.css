@@ -4,6 +4,8 @@
     border-top:1px solid #e6e6e6 ;
     box-sizing: border-box;
     position: relative;
+    padding-left: 24px;
+    padding-right: 16px;
     /* float: left; */
 
     /* position: absolute;
@@ -14,7 +16,7 @@
 .main .m-title-table{
     width: 100%;
     display: flex;
-    padding: 24px 16px 6px 24px;
+    padding: 24px 0px 6px 0px;
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
@@ -35,16 +37,12 @@
     padding-bottom: 12px;
     box-sizing: border-box;
 }
-.main .m-toolbar-table .m-toolbar-quickfilter{
-    margin-left: 24px;
-}
 .main .m-toolbar-table .m-toolbar-quickfilter input{
     margin-top: 0;
 }
 .main .m-toolbar-table .m-toolbar-actionbar{
     display: flex;
     align-items: center;
-    margin-right: 16px;
 }
 .main .m-toolbar-table .m-toolbar-actionbar .m-toolbar-icon{
     width: 36px;
