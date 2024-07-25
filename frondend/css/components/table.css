@@ -1,0 +1,146 @@
+/* Data-table */
+ .m-data-table{
+    width: 100%;
+    box-sizing: border-box;
+    /* height: 486px; */
+    height: calc(100% - 186px);
+    overflow: auto;
+}
+ .m-data-left{
+    text-align: left;
+}
+ .m-data-center{
+    text-align: center;
+}
+ .m-data-right{
+    text-align: right;
+}
+ .m-data-table table thead tr{
+    background-color: #EFF2F4;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+}
+ .m-data-table table thead tr:hover{
+    background-color: #EDFAFF;
+}
+ .m-data-table table thead tr:focus{
+    background-color: #3C8BE1;
+    
+}
+ .m-data-table table{
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 4px;
+    
+}
+ .m-data-table table tr td{
+    margin: 0 16px;
+    box-sizing: border-box;
+}
+ .m-data-table table tr{
+    height: 48px;
+    border-bottom: 1px solid #E0E0E0;
+}
+ .m-data-table table tbody tr:hover{
+    /* background-color: #F8F8F8; */
+    background-color: #EFF2F4;
+}
+ .m-data-table table tbody tr.m-data-table-selected{
+    /* background-color: #F1FFEF; */
+    background-color: #EDFAFF;
+}
+ .m-data-table table tbody tr.m-data-table-selected:hover{
+    /* color: #1565C0; */
+    color: #338BEE;
+}
+
+/* Nút Edit và More */
+.m-data-table table tbody tr{
+    position: relative;
+}
+.m-data-table table tbody tr .m-table-tool{
+    position: absolute;
+    right: 15px;
+    top: 6px;
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+}
+.m-data-table table tbody tr:hover .m-table-tool{
+    visibility: visible;
+}
+.m-data-table table tbody tr .m-table-tool .m-tool-icon{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.16);
+    cursor: pointer;
+    background-color: #EFF2F4;
+}
+.m-data-table table tbody tr .m-table-tool .m-edit{
+    background-image: url(../../assets/icon/pen.png);
+    margin-right: 8px;
+}
+.m-data-table table tbody tr .m-table-tool .m-more{
+    background-image: url(../../assets/icon/option.png);
+}
+.m-data-table table tbody tr .m-table-tool .m-delete{
+    background-image: url(../../assets/icon/delete-48.png);
+}
+
+/* Pagination */
+ .m-data-table .m-pagination{
+    width: calc(100% - 40px);
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 16px;
+    box-sizing: border-box;
+    border-top: 1px solid #E0E0E0;
+    border-bottom: 1px solid #E0E0E0;
+    position: absolute;
+    bottom: 16px;
+    background-color: #EFF2F4;
+    right: 16px;
+    left: 24px;
+}
+ .m-data-table .m-pagination .m-pagination-right{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+ .m-data-table .m-pagination .m-pagination-right select{
+    border: none;
+    background-color: #EFF2F4;
+}
+ .m-data-table .m-pagination .m-pagination-right .m-pagination-records{
+    margin: 0 16px;
+    box-sizing: border-box;
+}
+ .m-data-table .m-pagination .m-pagination-right .m-pagination-prev-next{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    margin-right: 16px;
+}
+ .m-data-table .m-pagination .m-pagination-right .m-pagination-icon{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+}
+ .m-data-table .m-pagination .m-pagination-right .m-pagination-prev{
+    background-image: url(../../assets/icon/btn-prev-page.svg);
+    margin-right: 16px;
+}
+ .m-data-table .m-pagination .m-pagination-right .m-pagination-next{
+    background-image: url(../../assets/icon/btn-next-page.svg);
+}
