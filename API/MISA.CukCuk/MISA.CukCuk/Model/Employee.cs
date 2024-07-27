@@ -88,6 +88,11 @@
         public string PhoneNumber { get; set; }
 
         /// <summary>
+        /// Số điện thoại cố định
+        /// </summary>
+        public string? LandlineNumber { get; set; }
+
+        /// <summary>
         /// Địa chỉ Email
         /// </summary>
         public string Email { get; set; }

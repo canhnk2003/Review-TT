@@ -88,6 +88,42 @@ namespace MISA.CukCuk.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Mã phòng ban đã tồn tại!.
+        /// </summary>
+        public static string Error_DepartmentCodeDuplicated {
+            get {
+                return ResourceManager.GetString("Error_DepartmentCodeDuplicated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mã phòng ban không được phép để trống!.
+        /// </summary>
+        public static string Error_DepartmentCodeNotEmpty {
+            get {
+                return ResourceManager.GetString("Error_DepartmentCodeNotEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tên phòng ban không được phép để trống.
+        /// </summary>
+        public static string Error_DepartmentNameNotEmpty {
+            get {
+                return ResourceManager.GetString("Error_DepartmentNameNotEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tên phòng ban không được phép có số!.
+        /// </summary>
+        public static string Error_DepartmentNameNotNumber {
+            get {
+                return ResourceManager.GetString("Error_DepartmentNameNotNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cập nhật dữ liệu không thành công!.
         /// </summary>
         public static string Error_Edit {
@@ -160,20 +196,20 @@ namespace MISA.CukCuk.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Số CMTND, CCCD không được phép có chữ!.
-        /// </summary>
-        public static string Error_IdentityNumberNotDigit {
-            get {
-                return ResourceManager.GetString("Error_IdentityNumberNotDigit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Số CMTND, CCCD không được phép để trống!.
         /// </summary>
         public static string Error_IdentityNumberNotEmpty {
             get {
                 return ResourceManager.GetString("Error_IdentityNumberNotEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Số CMTND, CCCD không được phép có chữ!.
+        /// </summary>
+        public static string Error_IdentityNumberNotLetter {
+            get {
+                return ResourceManager.GetString("Error_IdentityNumberNotLetter", resourceCulture);
             }
         }
         
@@ -187,20 +223,20 @@ namespace MISA.CukCuk.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Số điện thoại không được phép có chữ!.
-        /// </summary>
-        public static string Error_PhoneNumberNotDigit {
-            get {
-                return ResourceManager.GetString("Error_PhoneNumberNotDigit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Số điện thoại không được phép để trống!.
         /// </summary>
         public static string Error_PhoneNumberNotEmpty {
             get {
                 return ResourceManager.GetString("Error_PhoneNumberNotEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Số điện thoại không được phép có chữ!.
+        /// </summary>
+        public static string Error_PhoneNumberNotLetter {
+            get {
+                return ResourceManager.GetString("Error_PhoneNumberNotLetter", resourceCulture);
             }
         }
         

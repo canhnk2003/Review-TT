@@ -126,6 +126,12 @@ namespace MISA.CukCuk.Controllers
                 //1. Kiểm tra dữ liệu hợp lệ
                 Dictionary<string, string> errorData = CheckData(position);
 
+                //Mã vị trí không được phép trùng
+                if (CheckPositionCode(position.PositionCode))
+                {
+                    errorData.Add("PositionCode", Resources.ResourceVN.Error_PositionCodeDuplicated);
+                }
+
                 //2. Nếu không hợp lệ thì trả về lỗi, hợp lệ cho phép tạo mới 1 vị trí
                 if (errorData.Count > 0)
                 {
@@ -371,13 +377,7 @@ namespace MISA.CukCuk.Controllers
             }
 
             //2. Kiểm tra dữ liệu hợp lệ
-            //2.1. Mã vị trí không được phép trùng
-            if (CheckPositionCode(p.PositionCode))
-            {
-                errorData.Add("PositionCode", Resources.ResourceVN.Error_PositionCodeDuplicated);
-            }
-
-            //2.2. Tên vị trí không được phép có số
+            //Tên vị trí không được phép có số
             if (p.PositionName.Any(char.IsDigit))
             {
                 errorData.Add("PositionName", Resources.ResourceVN.Error_PositionNameNotNumber);
@@ -429,7 +429,7 @@ namespace MISA.CukCuk.Controllers
         private IActionResult ErrorInvalid(Dictionary<string, string> errorData)
         {
             ErrorService error = new ErrorService();
-            error.UserMsg = "Dữ liệu không hợp lệ!";
+            error.UserMsg = Resources.ResourceVN.Error_ValidData;
             error.Data = errorData;
             return BadRequest(error);
         }

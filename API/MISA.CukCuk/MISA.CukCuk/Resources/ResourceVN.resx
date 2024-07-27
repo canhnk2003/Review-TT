@@ -129,6 +129,22 @@
     <value>Xóa dữ liệu không thành công!</value>
     <comment>Lỗi xóa dữ liệu</comment>
   </data>
+  <data name="Error_DepartmentCodeDuplicated" xml:space="preserve">
+    <value>Mã phòng ban đã tồn tại!</value>
+    <comment>Lỗi mã phòng ban đã tồn tại</comment>
+  </data>
+  <data name="Error_DepartmentCodeNotEmpty" xml:space="preserve">
+    <value>Mã phòng ban không được phép để trống!</value>
+    <comment>Lỗi mã phòng ban để trống</comment>
+  </data>
+  <data name="Error_DepartmentNameNotEmpty" xml:space="preserve">
+    <value>Tên phòng ban không được phép để trống</value>
+    <comment>Lỗi tên phòng ban để trống</comment>
+  </data>
+  <data name="Error_DepartmentNameNotNumber" xml:space="preserve">
+    <value>Tên phòng ban không được phép có số!</value>
+    <comment>Lỗi tên phòng ban có số</comment>
+  </data>
   <data name="Error_Edit" xml:space="preserve">
     <value>Cập nhật dữ liệu không thành công!</value>
     <comment>Lỗi sửa dữ liệu</comment>
@@ -161,25 +177,25 @@
     <value>Ngày cấp không được phép lớn hơn ngày hiện tại!</value>
     <comment>Lỗi ngày cấp lớn hơn ngày hiện tại</comment>
   </data>
-  <data name="Error_IdentityNumberNotDigit" xml:space="preserve">
-    <value>Số CMTND, CCCD không được phép có chữ!</value>
-    <comment>Lỗi CMTND, CCCD có chữ</comment>
-  </data>
   <data name="Error_IdentityNumberNotEmpty" xml:space="preserve">
     <value>Số CMTND, CCCD không được phép để trống!</value>
     <comment>Lỗi CMTND, CCCD trống</comment>
+  </data>
+  <data name="Error_IdentityNumberNotLetter" xml:space="preserve">
+    <value>Số CMTND, CCCD không được phép có chữ!</value>
+    <comment>Lỗi CMTND, CCCD có chữ</comment>
   </data>
   <data name="Error_NotFound" xml:space="preserve">
     <value>Dữ liệu không tồn tại!</value>
     <comment>Lỗi không tìm thấy</comment>
   </data>
-  <data name="Error_PhoneNumberNotDigit" xml:space="preserve">
-    <value>Số điện thoại không được phép có chữ!</value>
-    <comment>Lỗi SĐT có chữ</comment>
-  </data>
   <data name="Error_PhoneNumberNotEmpty" xml:space="preserve">
     <value>Số điện thoại không được phép để trống!</value>
     <comment>Lỗi số điện thoại trống</comment>
+  </data>
+  <data name="Error_PhoneNumberNotLetter" xml:space="preserve">
+    <value>Số điện thoại không được phép có chữ!</value>
+    <comment>Lỗi SĐT có chữ</comment>
   </data>
   <data name="Error_PositionCodeDuplicated" xml:space="preserve">
     <value>Mã vị trí đã tồn tại!</value>
