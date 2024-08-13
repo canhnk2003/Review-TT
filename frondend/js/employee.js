@@ -862,8 +862,8 @@ class EmployeePage {
       loading.style.visibility = "visible";
       //4. Xóa hết dữ liệu trong bảng
       this.btnRefreshOnclick();
-      //5. Thêm nhân viên mới vào API
-      await this.editEmployeeToAPI(updateEmployee);
+      //5. Sửa nhân viên vào API
+      await this.editEmployeeToAPI(employeeId, updateEmployee);
       //6. Ẩn dialog vào loading
       dlgDetail.style.visibility = "hidden";
       loading.style.visibility = "hidden";
@@ -877,10 +877,10 @@ class EmployeePage {
    * Gọi API để thêm mới 1 nhân viên
    * Author: Nguyễn Khắc Cảnh 11/07/2024
    */
-  async editEmployeeToAPI(updateEmployee) {
+  async editEmployeeToAPI(employeeId ,updateEmployee) {
     try {
       const response = await fetch(
-        "https://cukcuk.manhnv.net/api/v1/Employees",
+        `https://cukcuk.manhnv.net/api/v1/Employees/${employeeId}`,
         {
           method: "PUT",
           headers: {
@@ -890,8 +890,9 @@ class EmployeePage {
         }
       );
       if (!response.ok) {
+        const errorData = await response.json();
         throw new Error(
-          "Sửa thông tin nhân viên không thành công!" + response.status
+          "Sửa thông tin nhân viên không thành công!" + response.status+` ${errorData.message}`
         );
       }
       //Hiển thị popup thông báo thành công
